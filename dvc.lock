@@ -27,30 +27,30 @@ stages:
       params.yaml:
         train.batch_size: 128
         train.dropout: 0.45
-        train.hidden_units: 64
+        train.hidden_units: 128
         train.lr: 0.001
         train.num_epochs: 2
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: 4d100d76a461fd4698d3e85cd75d7731
+      md5: 06d7e71ff2c80967af4b5866c2761bce
       size: 54
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: d470adaccbd9fd33f8bdead5ecdd8704
+      md5: 70f76c38a7909a46b6a6d95b35152127
       size: 56
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 7d2cf48f7361d94d533d135e45fdac85
-      size: 3681312
+      md5: 35cbb6768057c9d7c1ebe520390836a8
+      size: 7324888
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: 650ad1b25f78dfb268752ca688804b13
-      size: 3397680
+      md5: 516b3a8f84d81fe3fa058a06fc8a178e
+      size: 6778398
     - path: output/train_logs.csv
       hash: md5
-      md5: ca43e51a6c96b0b1265b166f2bfbd1a7
-      size: 100
+      md5: e77123587f38b52c4ba351278da7075d
+      size: 101
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -60,8 +60,8 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: 7d2cf48f7361d94d533d135e45fdac85
-      size: 3681312
+      md5: 35cbb6768057c9d7c1ebe520390836a8
+      size: 7324888
     - path: src/evaluate.py
       hash: md5
       md5: 1f095d24e9594bea8a4e9f28d5e799d5
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: 935be972cb48aa02058473a85be51525
-      size: 82
+      md5: d797c32daccc5d684df6b677944d4ef7
+      size: 83
     - path: output/predictions.json
       hash: md5
-      md5: 27f42d65b100e73945d70c399e441fe7
+      md5: dfe4f7583db6e2b9bb915e1854b7405b
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: ef1b4b93c478f603f586a0556090e52d.dir
-      size: 172518
+      md5: fb246e70cda91fa1290f555f15b885b2.dir
+      size: 172051
       nfiles: 10
